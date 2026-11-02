@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.escaramuzza.com/</loc></url>
+  <url><loc>https://www.escaramuzza.com/servizi/</loc></url>
+  <url><loc>https://www.escaramuzza.com/app/</loc></url>
+  <url><loc>https://www.escaramuzza.com/palletwise/</loc></url>
+  <url><loc>https://www.escaramuzza.com/palletwise-labels/</loc></url>
+  <url><loc>https://www.escaramuzza.com/palletwise-scan/</loc></url>
+  <url><loc>https://www.escaramuzza.com/fillwise/</loc></url>
+  <url><loc>https://www.escaramuzza.com/chi-sono/</loc></url>
+  <url><loc>https://www.escaramuzza.com/contatti/</loc></url>
   <url><loc>https://www.escaramuzza.com/privacy.html</loc></url>
   <url><loc>https://www.escaramuzza.com/palletwise-labels/privacy.html</loc></url>
   <url><loc>https://www.escaramuzza.com/palletwise-scan/privacy.html</loc></url>

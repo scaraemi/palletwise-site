@@ -5,164 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Escaramuzza – Consulenza software</title>
 <meta name="description" content="Escaramuzza di Emiliano Scaramuzza: sviluppo software e app per aziende. Autore di PalletWise, l'app per la composizione dei pallet e il carico di camion e container, di PalletWise Labels, l'app per le etichette logistiche SSCC dei pallet, e di FillWise, l'app per il controllo dei preimballaggi con marchio ℮.">
-<link rel="icon" href="palletwise-icon.png">
-<style>
-  :root { --bg: #f4f6fb; --card: #fff; --fg: #1a2033; --muted: #5b6478; --accent: #2a63e2; --line: #e3e7f0; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0f1320; --card: #1a2033; --fg: #e8ebf3; --muted: #a3abbd; --accent: #4f86f7; --line: #2a3147; } }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  a { color: var(--accent); }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
-  header { padding: 28px 0 8px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-  .brand { font-weight: 800; font-size: 22px; letter-spacing: -0.3px; }
-  .brand span { color: var(--accent); }
-  nav a { margin-left: 18px; text-decoration: none; font-weight: 600; font-size: 15px; }
-  .hero { padding: 48px 0 40px; }
-  .hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -1px; }
-  .hero p { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
-  section { background: var(--card); border-radius: 24px; padding: 32px; margin-bottom: 24px; }
-  h2 { margin: 0 0 12px; font-size: 26px; }
-  .muted { color: var(--muted); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
-  .tile { border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
-  .tile b { display: block; margin-bottom: 4px; }
-  .app { display: grid; grid-template-columns: 1fr 260px; gap: 32px; align-items: center; }
-  .app-head { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  .app-head img { width: 64px; height: 64px; border-radius: 16px; }
-  .app ul { padding-left: 20px; margin: 12px 0 20px; }
-  .shot { width: 100%; border-radius: 20px; display: block; }
-  .badge { display: inline-block; background: var(--accent); color: #fff; padding: 10px 18px; border-radius: 12px; font-weight: 700; text-decoration: none; }
-  .stores { display: flex; flex-wrap: wrap; gap: 10px; }
-  .badge.soon { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: 8px 16px; }
-  .links a { margin-right: 18px; }
-  footer { padding: 16px 0 40px; font-size: 14px; color: var(--muted); }
-  @media (max-width: 720px) { .app { grid-template-columns: 1fr; } .shot { max-width: 280px; margin: 0 auto; } nav { display: none; } section { padding: 24px; } }
-</style>
+<link rel="canonical" href="https://www.escaramuzza.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Escaramuzza – Consulenza software">
+<meta property="og:description" content="Escaramuzza di Emiliano Scaramuzza: sviluppo software e app per aziende. Autore di PalletWise, l'app per la composizione dei pallet e il carico di camion e container, di PalletWise Labels, l'app per le etichette logistiche SSCC dei pallet, e di FillWise, l'app per il controllo dei preimballaggi con marchio ℮.">
+<meta property="og:url" content="https://www.escaramuzza.com/">
+<meta property="og:image" content="https://www.escaramuzza.com/palletwise-icon.png">
+<link rel="icon" href="/palletwise-icon.png">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">e<span>scaramuzza</span></div>
-    <nav><a href="#servizi">Servizi</a><a href="#palletwise">PalletWise</a><a href="#palletwise-labels">PalletWise Labels</a><a href="#palletwise-scan">PalletWise Scan</a><a href="#fillwise">FillWise</a><a href="#contatti">Contatti</a></nav>
-  </header>
-
-  <div class="hero">
-    <h1>Software su misura per chi lavora sul serio.</h1>
-    <p>Consulenza e sviluppo di applicazioni gestionali, app mobili e strumenti per la logistica, dall'idea alla pubblicazione.</p>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/">e<span>scaramuzza</span></a>
+    <nav class="nav" aria-label="Menu principale"><a href="/servizi/">Servizi</a><a href="/app/">App</a><a href="/chi-sono/">Chi sono</a><a href="/contatti/">Contatti</a></nav>
+    <details class="mnav">
+      <summary>Menu</summary>
+      <nav aria-label="Menu principale"><a href="/servizi/">Servizi</a><a href="/app/">App</a><a href="/chi-sono/">Chi sono</a><a href="/contatti/">Contatti</a></nav>
+    </details>
   </div>
+</header>
+<main class="wrap">
+<div class="hero">
+  <h1>Software su misura per chi lavora sul serio.</h1>
+  <p>Consulenza e sviluppo di applicazioni gestionali, app mobili e strumenti per la logistica, dall'idea alla pubblicazione.</p>
+  <div class="actions"><a class="btn" href="/contatti/">Parliamo del tuo progetto</a><a class="btn ghost" href="/app/">Scopri le app</a></div>
+</div>
 
-  <section id="servizi">
-    <h2>Servizi</h2>
-    <div class="grid">
-      <div class="tile"><b>Software gestionale</b><span class="muted">Applicazioni desktop e web costruite sui processi della tua azienda.</span></div>
-      <div class="tile"><b>App mobili</b><span class="muted">App Android e iOS, dal prototipo alla pubblicazione sugli store.</span></div>
-      <div class="tile"><b>Integrazioni</b><span class="muted">Collegamento tra gestionali, database e servizi esterni.</span></div>
-      <div class="tile"><b>Consulenza</b><span class="muted">Analisi, scelta delle tecnologie e affiancamento ai team interni.</span></div>
-    </div>
-  </section>
+<section class="band" id="servizi">
+  <div class="band-head"><h2>Servizi</h2><a href="/servizi/">Tutti i dettagli</a></div>
+  <div class="grid four">
+    <div class="tile"><b>Software gestionale</b><span class="muted">Applicazioni desktop e web costruite sui processi della tua azienda.</span></div>
+    <div class="tile"><b>App mobili</b><span class="muted">App Android e iOS, dal prototipo alla pubblicazione sugli store.</span></div>
+    <div class="tile"><b>Integrazioni</b><span class="muted">Collegamento tra gestionali, database e servizi esterni.</span></div>
+    <div class="tile"><b>Consulenza</b><span class="muted">Analisi, scelta delle tecnologie e affiancamento ai team interni.</span></div>
+  </div>
+</section>
 
-  <section id="palletwise">
-    <div class="app">
-      <div>
-        <div class="app-head">
-          <img src="palletwise-icon.png" alt="Icona di PalletWise">
-          <div><h2 style="margin:0">PalletWise</h2><span class="muted">Pallet e carichi, in pochi secondi</span></div>
-        </div>
-        <p>L'app per comporre i pallet con cartoni uguali e calcolare il carico di camion, furgoni e container.</p>
-        <ul>
-          <li>Schemi di strato e vista 3D, strato per strato</li>
-          <li>Metri di carico, portata e ordine di carico</li>
-          <li>Funziona offline, senza account né pubblicità</li>
-          <li>In italiano, inglese, tedesco, francese e spagnolo</li>
-        </ul>
-        <div class="stores">
-          <a class="badge" href="https://play.google.com/store/apps/details?id=com.escaramuzza.palletwise">Disponibile su Google Play</a>
-          <a class="badge" href="https://apps.apple.com/app/id6823914744">Scarica su App Store</a>
-        </div>
-        <p class="links" style="margin-top:16px"><a href="privacy.html">Privacy policy</a></p>
-      </div>
-      <img class="shot" src="palletwise-screen.png" alt="PalletWise: carico di un semirimorchio con 33 pallet EUR">
-    </div>
-  </section>
+<section class="band" aria-labelledby="app-title">
+  <div class="band-head"><h2 id="app-title">Le app</h2><a href="/app/">Vedi tutte</a></div>
+  <div class="grid two">
+    <a class="card" id="palletwise" href="/palletwise/">
+      <img src="/palletwise-icon.png" alt="" width="56" height="56">
+      <div><div class="card-title"><b>PalletWise</b><span class="pill ok">Disponibile</span></div><span class="muted">Pallet e carichi, in pochi secondi</span></div>
+    </a>
+    <a class="card" id="palletwise-labels" href="/palletwise-labels/">
+      <img src="/palletwise-labels-icon.png" alt="" width="56" height="56">
+      <div><div class="card-title"><b>PalletWise Labels</b><span class="pill ok">Disponibile</span></div><span class="muted">Etichette SSCC per pallet, in pochi secondi</span></div>
+    </a>
+    <a class="card" id="palletwise-scan" href="/palletwise-scan/">
+      <img src="/palletwise-scan-icon.png" alt="" width="56" height="56">
+      <div><div class="card-title"><b>PalletWise Scan</b><span class="pill soon">In arrivo</span></div><span class="muted">Ricevimento merce e scadenze</span></div>
+    </a>
+    <a class="card" id="fillwise" href="/fillwise/">
+      <img src="/fillwise-icon.png" alt="" width="56" height="56">
+      <div><div class="card-title"><b>FillWise</b><span class="pill soon">In arrivo</span></div><span class="muted">Controllo dei preimballaggi ℮ e registro delle bilance</span></div>
+    </a>
+  </div>
+</section>
 
-  <section id="palletwise-labels">
-    <div class="app">
-      <div>
-        <div class="app-head">
-          <img src="palletwise-labels-icon.png" alt="Icona di PalletWise Labels">
-          <div><h2 style="margin:0">PalletWise Labels</h2><span class="muted">Etichette SSCC per pallet, in pochi secondi</span></div>
-        </div>
-        <p>L'app per creare e stampare l'etichetta logistica dei pallet, con il codice SSCC e i codici a barre GS1-128.</p>
-        <ul>
-          <li>SSCC dal tuo prefisso aziendale, cifra di controllo automatica</li>
-          <li>Anteprima dal vivo e stampa in PDF su A6, A5 o rotolo 100 × 150</li>
-          <li>Stampa in serie e registro degli SSCC stampati</li>
-          <li>Funziona offline, senza account né pubblicità, in 5 lingue</li>
-        </ul>
-        <div class="stores">
-          <a class="badge" href="https://play.google.com/store/apps/details?id=com.escaramuzza.palletwiselabels">Disponibile su Google Play</a>
-          <a class="badge" href="https://apps.apple.com/app/id6825819837">Scarica su App Store</a>
-        </div>
-        <p class="links" style="margin-top:16px"><a href="palletwise-labels/privacy.html">Privacy policy</a></p>
-        <p class="muted" style="font-size:14px">App indipendente, non affiliata né approvata da GS1.</p>
-      </div>
-      <img class="shot" src="palletwise-labels-screen.png" alt="PalletWise Labels: editor con l'anteprima dell'etichetta SSCC">
-    </div>
-  </section>
-
-  <section id="palletwise-scan">
-    <div class="app">
-      <div>
-        <div class="app-head">
-          <img src="palletwise-scan-icon.png" alt="Icona di PalletWise Scan">
-          <div><h2 style="margin:0">PalletWise Scan</h2><span class="muted">Ricevimento merce e scadenze</span></div>
-        </div>
-        <p>L'app per il ricevimento merce: legge con la fotocamera le etichette logistiche dei pallet in arrivo e controlla scadenze e bolla.</p>
-        <ul>
-          <li>Codici GS1-128 letti tutti insieme o uno alla volta, dati in chiaro</li>
-          <li>Semaforo delle scadenze e confronto con la bolla o l'ordine</li>
-          <li>Registro dei ricevimenti, export CSV e verbale PDF</li>
-          <li>Funziona offline, senza account né pubblicità, in 5 lingue</li>
-        </ul>
-        <span class="badge">Presto su App Store e Google Play</span>
-        <p class="links" style="margin-top:16px"><a href="palletwise-scan/privacy.html">Privacy policy</a> · <a href="palletwise-scan/sample-label.png">Etichetta d'esempio</a></p>
-        <p class="muted" style="font-size:14px">App indipendente, non affiliata né approvata da GS1.</p>
-      </div>
-      <img class="shot" src="palletwise-scan-screen.png" alt="PalletWise Scan: elenco dei ricevimenti con gli esiti dei controlli">
-    </div>
-  </section>
-
-  <section id="fillwise">
-    <div class="app">
-      <div>
-        <div class="app-head">
-          <img src="fillwise-icon.png" alt="Icona di FillWise">
-          <div><h2 style="margin:0">FillWise</h2><span class="muted">Controllo dei preimballaggi ℮ e registro delle bilance</span></div>
-        </div>
-        <p>L'app per chi confeziona a peso o a volume con il marchio ℮: controllo statistico dei lotti, registro per gli ispettori metrici e scadenze delle bilance.</p>
-        <ul>
-          <li>Errore tollerato, limiti T1 e T2 e piano di campionamento calcolati dal lotto</li>
-          <li>Esito accettato o rifiutato con il motivo; verbale PDF e registro per periodo</li>
-          <li>Semaforo della verificazione periodica delle bilance</li>
-          <li>Funziona offline, senza account né pubblicità, in 5 lingue</li>
-        </ul>
-        <span class="badge">Presto su App Store e Google Play</span>
-        <p class="links" style="margin-top:16px"><a href="fillwise/privacy.html">Privacy policy</a> · <a href="fillwise/sample-label.png">Etichetta d'esempio</a></p>
-        <p class="muted" style="font-size:14px">App indipendente, non affiliata né approvata da GS1 o dalle autorità metriche.</p>
-      </div>
-      <img class="shot" src="fillwise-screen.png" alt="FillWise: registro dei controlli dei lotti con gli esiti">
-    </div>
-  </section>
-
-  <section id="contatti">
-    <h2>Contatti</h2>
-    <p><b>Escaramuzza</b> di Emiliano Scaramuzza<br>
+<section class="band cta" id="contatti">
+  <div>
+    <h2>Hai un progetto in mente?</h2>
+    <p>Raccontami di cosa hai bisogno: un gestionale, un'app o un collegamento tra sistemi.</p>
+  </div>
+  <a class="btn" href="/contatti/">Contattami</a>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <b>Escaramuzza</b> di Emiliano Scaramuzza<br>
       Via Monte Rosa 5, 30020 Marcon (VE), Italia<br>
       P.IVA 04627980271<br>
-      Email: <a href="mailto:sviluppo@escaramuzza.com">sviluppo@escaramuzza.com</a></p>
-  </section>
-
-  <footer>© 2026 Escaramuzza di Emiliano Scaramuzza · P.IVA 04627980271 · <a href="privacy.html">Privacy PalletWise</a> · <a href="palletwise-labels/privacy.html">Privacy PalletWise Labels</a> · <a href="palletwise-scan/privacy.html">Privacy PalletWise Scan</a> · <a href="fillwise/privacy.html">Privacy FillWise</a></footer>
-</div>
+      <a href="mailto:sviluppo@escaramuzza.com">sviluppo@escaramuzza.com</a>
+    </div>
+    <div>
+      <b>App</b>
+      <a href="/palletwise/">PalletWise</a>
+      <a href="/palletwise-labels/">PalletWise Labels</a>
+      <a href="/palletwise-scan/">PalletWise Scan</a>
+      <a href="/fillwise/">FillWise</a>
+    </div>
+    <div>
+      <b>Privacy</b>
+      <a href="/privacy.html">Privacy PalletWise</a>
+      <a href="/palletwise-labels/privacy.html">Privacy PalletWise Labels</a>
+      <a href="/palletwise-scan/privacy.html">Privacy PalletWise Scan</a>
+      <a href="/fillwise/privacy.html">Privacy FillWise</a>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 Escaramuzza di Emiliano Scaramuzza · P.IVA 04627980271</div>
+</footer>
 </body>
 </html>
