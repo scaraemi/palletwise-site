@@ -130,3 +130,11 @@ h2 { margin: 0 0 12px; font-size: 24px; }
   .app.larga { grid-template-columns: 1fr; }
   .app.larga .shot { max-width: 100%; }
 }
+
+/* Galleria delle schermate nelle pagine delle app: una striscia che scorre di lato. */
+.galleria { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 10px; margin-top: 12px; }
+.galleria a { flex: 0 0 190px; scroll-snap-align: start; }
+.galleria img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+.galleria a:hover img, .galleria a:focus-visible img { border-color: var(--accent); }
+.galleria-nota { margin: 4px 0 0; }
+@media (max-width: 680px) { .galleria a { flex-basis: 58%; } }
