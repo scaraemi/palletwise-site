@@ -113,3 +113,20 @@ h2 { margin: 0 0 12px; font-size: 24px; }
   .grid.four, .steps { grid-template-columns: 1fr; }
   .row { flex-direction: column; }
 }
+
+/* Pagina Demo: la schermata della web app è larga, non verticale come quelle del telefono. */
+.app.larga { grid-template-columns: 1fr 1.15fr; align-items: center; }
+.app.larga .shot { border-radius: 12px; border: 1px solid var(--line); }
+.app .demo-title { margin: 0; font-size: 28px; }
+.app h3 { font-size: 18px; margin: 22px 0 4px; }
+.figura { margin: 0; }
+.figura img { display: block; width: 100%; border-radius: 12px; border: 1px solid var(--line); }
+.figura figcaption { margin-top: 8px; }
+.testo { max-width: 820px; }
+.testo h2 { font-size: 21px; margin-top: 28px; }
+.testo h2:first-of-type { margin-top: 8px; }
+.testo h3 { font-size: 17px; margin: 18px 0 4px; }
+@media (max-width: 860px) {
+  .app.larga { grid-template-columns: 1fr; }
+  .app.larga .shot { max-width: 100%; }
+}
