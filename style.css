@@ -138,3 +138,13 @@ h2 { margin: 0 0 12px; font-size: 24px; }
 .galleria a:hover img, .galleria a:focus-visible img { border-color: var(--accent); }
 .galleria-nota { margin: 4px 0 0; }
 @media (max-width: 680px) { .galleria a { flex-basis: 58%; } }
+
+/* Pagine delle app: versioni e domande frequenti. */
+.versioni .tile ul { margin: 8px 0 0; padding-left: 20px; }
+.versioni .tile li + li { margin-top: 4px; }
+.versioni .pro { border-color: var(--accent); }
+.versioni-nota { margin: 14px 0 0; }
+.faq { border-top: 1px solid var(--line); }
+.faq:last-of-type { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; font-weight: 600; padding: 12px 0; }
+.faq p { margin: 0 0 14px; color: var(--muted); }
