@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PalletWise Labels – Tracciato CSV degli articoli</title>
+<meta name="description" content="Formato del file CSV per importare l'anagrafica articoli in PalletWise Labels: colonne, valori ammessi, regole ed esempio, con il modello da scaricare.">
+<link rel="canonical" href="https://www.escaramuzza.com/palletwise-labels/tracciato-csv.html">
+<link rel="icon" href="/palletwise-icon.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .tbl { overflow-x: auto; margin: 12px 0 20px; }
+  .tbl table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+  .tbl th, .tbl td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); }
+  .tbl th { font-size: 14px; color: var(--muted); }
+  .tbl td:first-child { font-weight: 600; white-space: nowrap; }
+  pre { background: var(--bg); border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 14px; line-height: 1.5; }
+  code { font-size: 0.92em; }
+  .lang { display: flex; gap: 18px; margin: 4px 0 16px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/">e<span>scaramuzza</span></a>
+    <nav class="nav" aria-label="Menu principale"><a href="/servizi/">Servizi</a><a href="/app/" aria-current="page">App</a><a href="/chi-sono/">Chi sono</a><a href="/contatti/">Contatti</a></nav>
+    <details class="mnav">
+      <summary>Menu</summary>
+      <nav aria-label="Menu principale"><a href="/servizi/">Servizi</a><a href="/app/" aria-current="page">App</a><a href="/chi-sono/">Chi sono</a><a href="/contatti/">Contatti</a></nav>
+    </details>
+  </div>
+</header>
+<main class="wrap">
+<nav class="crumbs" aria-label="Percorso"><a href="/">Home</a><span class="sep">/</span><a href="/app/">App</a><span class="sep">/</span><a href="/palletwise-labels/">PalletWise Labels</a><span class="sep">/</span><span aria-current="page">Tracciato CSV</span></nav>
+
+<section class="band" id="it">
+  <h1>Tracciato CSV degli articoli</h1>
+  <p class="lang"><a href="#it">Italiano</a><a href="#en">English</a></p>
+  <p>Nella versione per Windows e Mac di PalletWise Labels l'anagrafica degli articoli si può importare da un file CSV, per esempio esportato dal gestionale. Il file ha una riga per articolo; la prima riga contiene i nomi delle colonne.</p>
+  <p>Il modo più semplice è partire dal modello, con le colonne giuste e una riga d'esempio: aprilo con Excel, compilalo e importalo dall'app (Articoli → Importa CSV).</p>
+  <p class="links"><a href="/palletwise-labels/modello_articoli.csv" download>Scarica il modello (italiano)</a><a href="/palletwise-labels/items_template.csv" download>Download the template (English)</a></p>
+
+  <h2>Colonne</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Colonna</th><th>Obbligatoria</th><th>Cosa scrivere</th><th>Esempio</th></tr></thead>
+      <tbody>
+        <tr><td>GTIN</td><td><b>sì</b></td><td>Codice EAN dei cartoni: 8, 12, 13 o 14 cifre, con la cifra di controllo giusta</td><td>4006381333931</td></tr>
+        <tr><td>Descrizione</td><td>no</td><td>Testo libero; se manca si usa il codice o il GTIN</td><td>Biscotti frolla 500 g</td></tr>
+        <tr><td>Codice articolo</td><td>no</td><td>Il codice del gestionale; se c'è, alle importazioni successive aggiorna l'articolo</td><td>B01</td></tr>
+        <tr><td>Quantità</td><td>no</td><td>Cartoni per pallet, solo cifre</td><td>40</td></tr>
+        <tr><td>Peso netto</td><td>no</td><td>Kg per pallet, con il separatore decimale della lingua dell'app (virgola in italiano)</td><td>523,45</td></tr>
+        <tr><td>Tipo di data</td><td>no</td><td>«Scadenza» (o 17) per la data di scadenza; vuoto o «TMC» per «da consumarsi preferibilmente entro»</td><td>TMC</td></tr>
+        <tr><td>Vita (giorni)</td><td>no</td><td>Giorni da aggiungere alla data di stampa per la data sull'etichetta; vuoto: data a mano</td><td>180</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Esempio</h2>
+<pre>Descrizione;Codice articolo;GTIN;Quantità;Peso netto;Tipo di data;Vita (giorni)
+Biscotti frolla 500 g;B01;4006381333931;40;523,45;TMC;180
+Latte UHT 1 l;L01;96385074;60;612;Scadenza;90</pre>
+
+  <h2>Regole</h2>
+  <ul>
+    <li>Le colonne possono essere in qualsiasi ordine; quelle che non servono si possono togliere.</li>
+    <li>Vanno bene anche altri nomi, in italiano, inglese, tedesco, francese o spagnolo: per esempio <code>EAN</code>, <code>Codice EAN</code>, <code>Barcode</code> per il GTIN; <code>Cod</code>, <code>SKU</code>, <code>Item code</code>, <code>Artikelnummer</code> per il codice; <code>Qty</code>, <code>Colli</code>, <code>Menge</code> per la quantità; <code>Shelf life</code>, <code>Haltbarkeit</code> per la vita in giorni.</li>
+    <li>Separatore: punto e virgola, virgola o tabulazione, riconosciuto dalla prima riga. Testi con il separatore dentro vanno tra virgolette.</li>
+    <li>Codifica: UTF-8 oppure quella di Excel per Windows (Windows-1252), così le lettere accentate restano giuste.</li>
+    <li>Un articolo con lo stesso codice, o senza codice con lo stesso GTIN, viene aggiornato; gli altri si aggiungono. L'ultimo lotto stampato di ogni articolo resta.</li>
+    <li>Le righe con il GTIN mancante o sbagliato vengono scartate: l'app dice quante sono.</li>
+    <li>Gli articoli importati vanno all'azienda in uso nell'app. Con più aziende, importa un file per ciascuna dopo averla scelta.</li>
+  </ul>
+  <p class="muted fine">L'esportazione degli articoli dall'app (Articoli → Esporta CSV) produce lo stesso formato, quindi si può reimportare o usare come modello.</p>
+</section>
+
+<section class="band" id="en" lang="en">
+  <h2>CSV layout for items</h2>
+  <p>In the Windows and Mac version of PalletWise Labels the item catalogue can be imported from a CSV file, for example exported from your ERP. The file has one row per item; the first row holds the column names.</p>
+  <p>The easiest way is to start from the template, with the right columns and an example row: open it in Excel, fill it in and import it from the app (Items → Import CSV).</p>
+  <p class="links"><a href="/palletwise-labels/items_template.csv" download>Download the template</a></p>
+
+  <h2>Columns</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Column</th><th>Required</th><th>What to enter</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>GTIN</td><td><b>yes</b></td><td>EAN code of the cases: 8, 12, 13 or 14 digits, with the correct check digit</td><td>4006381333931</td></tr>
+        <tr><td>Description</td><td>no</td><td>Free text; if missing, the code or the GTIN is used</td><td>Shortbread cookies 500 g</td></tr>
+        <tr><td>Item code</td><td>no</td><td>The code from your ERP; if present, later imports update the item</td><td>B01</td></tr>
+        <tr><td>Quantity</td><td>no</td><td>Cases per pallet, digits only</td><td>40</td></tr>
+        <tr><td>Net weight</td><td>no</td><td>Kg per pallet, with the decimal separator of the app's language (point in English)</td><td>523.45</td></tr>
+        <tr><td>Date type</td><td>no</td><td>“Expiry” (or 17) for an expiry date; empty or “Best before” for a best-before date</td><td>Best before</td></tr>
+        <tr><td>Shelf life (days)</td><td>no</td><td>Days added to the print date for the date on the label; empty: date entered by hand</td><td>180</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Example</h2>
+<pre>Description,Item code,GTIN,Quantity,Net weight,Date type,Shelf life (days)
+Shortbread cookies 500 g,B01,4006381333931,40,523.45,Best before,180
+UHT milk 1 l,L01,96385074,60,612,Expiry,90</pre>
+
+  <h2>Rules</h2>
+  <ul>
+    <li>Columns can be in any order; the ones you do not need can be left out.</li>
+    <li>Other names work too, in English, Italian, German, French or Spanish: for example <code>EAN</code>, <code>Barcode</code> for the GTIN; <code>SKU</code>, <code>Code</code>, <code>Codice</code> for the item code; <code>Qty</code>, <code>Cartons</code>, <code>Menge</code> for the quantity; <code>Shelf life</code>, <code>Days</code> for the shelf life.</li>
+    <li>Separator: semicolon, comma or tab, detected from the first row. Text containing the separator goes in double quotes.</li>
+    <li>Encoding: UTF-8 or Excel for Windows (Windows-1252), so accented letters stay correct.</li>
+    <li>An item with the same code, or with no code and the same GTIN, is updated; the others are added. The last printed batch of each item is kept.</li>
+    <li>Rows with a missing or wrong GTIN are skipped: the app tells you how many.</li>
+    <li>Imported items go to the company in use in the app. With several companies, import one file for each after selecting it.</li>
+  </ul>
+  <p class="muted fine">Exporting items from the app (Items → Export CSV) produces the same format, so the file can be imported again or used as a template.</p>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <b>Escaramuzza</b> di Emiliano Scaramuzza<br>
+      Via Monte Rosa 5, 30020 Marcon (VE), Italia<br>
+      P.IVA 04627980271<br>
+      <a href="mailto:sviluppo@escaramuzza.com">sviluppo@escaramuzza.com</a>
+    </div>
+    <div>
+      <b>App</b>
+      <a href="/palletwise/">PalletWise</a>
+      <a href="/palletwise-labels/">PalletWise Labels</a>
+      <a href="/palletwise-scan/">PalletWise Scan</a>
+      <a href="/fillwise/">FillWise</a>
+    </div>
+    <div>
+      <b>Privacy</b>
+      <a href="/privacy.html">Privacy PalletWise</a>
+      <a href="/palletwise-labels/privacy.html">Privacy PalletWise Labels</a>
+      <a href="/palletwise-scan/privacy.html">Privacy PalletWise Scan</a>
+      <a href="/fillwise/privacy.html">Privacy FillWise</a>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 Escaramuzza di Emiliano Scaramuzza · P.IVA 04627980271</div>
+</footer>
+</body>
+</html>
